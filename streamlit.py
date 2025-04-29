@@ -21,7 +21,7 @@ c4.metric("lowest_price",Min)
 #---------------------------------
 st.header("1.DATAFRAME ✔️")
 selected_category = st.sidebar.selectbox("Choose the category", df["Category"].unique())
-selected_rate=st.sidebar.slider("Choose the rating",0,5,1)
+selected_rate=st.sidebar.slider("Choose the rating",1,5,1)
 filtered_books = df[(df["Category"] == selected_category) & (df["Rating"]==selected_rate) ]
 st.dataframe(filtered_books)
 c1.image("avg_price_by_rating.png",caption='avg_price_by_rating.png')
